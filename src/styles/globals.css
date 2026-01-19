@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-text-primary: 40 40 40;
+    --color-text-secondary: 100 100 100;
+    --color-border: 210 210 210;
+    --color-accent: 180 150 130;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#fafaf9] text-[rgb(var(--color-text-primary))];
+    font-family: 'Crimson Text', Georgia, serif;
+    line-height: 1.7;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 250, 245, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(245, 240, 235, 0.5) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Tangerine', cursive;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.8s ease-out forwards;
+  }
+}

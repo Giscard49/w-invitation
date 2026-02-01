@@ -16,7 +16,7 @@ export default function App() {
 
   // Countdown timer
   useEffect(() => {
-    const targetDate = new Date('2026-09-26T10:00:00');
+    const targetDate = new Date('2026-09-27T11:00:00');
 
     const updateTimer = () => {
       const now = new Date();
@@ -58,13 +58,13 @@ export default function App() {
           {/* Date and Location Header */}
           <div className="flex justify-between w-full mb-12 text-sm animate-fadeInUp">
             <div className="text-center">
-              <div className="text-lg font-semibold mb-1 tracking-wide">26.09.26</div>
-              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">date</div>
+              <div className="text-lg font-semibold mb-1 tracking-wide">Heaven Garden</div>
+              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Location</div>
             </div>
             <div className="w-px bg-gradient-to-b from-transparent via-[rgb(var(--color-border))] to-transparent" />
             <div className="text-center">
-              <div className="text-lg font-semibold mb-1 tracking-wide">Jalia Hall & Garden</div>
-              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">location</div>
+              <div className="text-lg font-semibold mb-1 tracking-wide">27.09.2026</div>
+              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Date</div>
             </div>
           </div>
 
@@ -126,12 +126,12 @@ export default function App() {
           </div>
 
           {/* Dove Decoration */}
-          <div className="flex justify-end mt-6 pr-8">
+          {/* <div className="flex justify-end mt-6 pr-8">
             <svg width="70" height="70" viewBox="0 0 60 60" fill="none" className="text-[rgb(var(--color-accent))]/30">
               <path d="M45 25C45 25 40 20 35 20C30 20 28 22 25 25C22 28 20 32 18 35C16 38 12 40 10 42C8 44 5 48 5 48C5 48 8 45 12 43C16 41 20 40 25 38C30 36 35 33 38 30C41 27 43 25 45 25Z" fill="currentColor"/>
               <ellipse cx="38" cy="24" rx="2.5" ry="2.5" fill="currentColor"/>
             </svg>
-          </div>
+          </div> */}
 
           {/* Schedule Heading */}
           <h3 className="text-5xl mt-12 mb-6 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
@@ -141,14 +141,14 @@ export default function App() {
           {/* Date Button */}
           <div className="flex justify-center mb-4">
             <div className="px-10 py-3 bg-white border border-[rgb(var(--color-border))] rounded-full text-sm shadow-sm hover:shadow-md transition-shadow">
-              September 26, 2026
+              September 27, 2026
             </div>
           </div>
         </div>
       </section>
 
       {/* Schedule Details */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-10 relative">
+      <section className="min-h-screen flex flex-col items-center justify-start px-5 py-10 relative">
         <div className="absolute top-40 left-10 w-56 h-56 bg-gradient-to-br from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -191,7 +191,7 @@ export default function App() {
             <div className="text-3xl mb-8 tracking-[0.15em] font-light tabular-nums">
               {timeLeft.days} : {String(timeLeft.hours).padStart(2, '0')} : {String(timeLeft.minutes).padStart(2, '0')} : {String(timeLeft.seconds).padStart(2, '0')}
             </div>
-            <div className="flex justify-center gap-10 text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
+            <div className="flex justify-center gap-4 text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
               <span>Days</span>
               <span>Hours</span>
               <span>Minutes</span>
@@ -202,7 +202,7 @@ export default function App() {
       </section>
 
       {/* Countdown with Image */}
-      <section className="min-h-screen flex flx-col items-center justify-center px-6 py-16 relative">
+      <section className="min-h-screen flex flx-col items-center justify-center px-6 py-12 relative">
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-tl from-[#f5f0eb]/30 to-transparent rounded-full blur-3xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -238,29 +238,42 @@ export default function App() {
         <div className="absolute top-32 left-8 w-52 h-52 bg-gradient-to-br from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
-          <h3 className="text-5xl mb-5 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
+          <h3 className="text-5xl mb-6 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
             Dress code
           </h3>
 
           <p className="text-center text-base leading-relaxed mb-16 text-[rgb(var(--color-text-secondary))] max-w-sm mx-auto">
-            Dress to impress – and get ready for an evening filled with dancing and celebration!
+            Kindly wear nude & neutral colors, let’s dance and celebrate in style!
           </p>
 
           <h3 className="text-5xl mb-8 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
             Location
           </h3>
 
-          <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-8 mb-12 shadow-xl shadow-black/5">
-            <div className="flex items-start gap-4 justify-center">
-              <MapPin className="w-6 h-6 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0" strokeWidth={1.5} />
-              <div className="text-center">
-                <p className="font-semibold mb-2 text-lg">Jalia Hall & Garden</p>
-                <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed">
-                  Address: <span className="underline decoration-dotted underline-offset-4">KK4355 St</span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <a
+  href="https://www.google.com/maps/place/Heaven+Garden+Rebero/@-1.9964914,30.0779449,17z/data=!4m14!1m7!3m6!1s0x19dca8af55f8d09d:0x9800d21071830de7!2sHeaven+Garden+Rebero!8m2!3d-1.9964914!4d30.0779449!16s%2Fg%2F11f3jvg754!3m5!1s0x19dca8af55f8d09d:0x9800d21071830de7!8m2!3d-1.9964914!4d30.0779449!16s%2Fg%2F11f3jvg754?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D" 
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-8 mb-12 shadow-xl shadow-black/5 cursor-pointer hover:shadow-2xl transition">
+    <div className="flex items-start gap-4 justify-center">
+      <MapPin
+        className="w-6 h-6 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0"
+        strokeWidth={1.5}
+      />
+      <div className="text-center">
+        <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero</p>
+        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed">
+          Address:{" "}
+          <span className="underline decoration-dotted underline-offset-4">
+            KK 553 St
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+
 
           {/* Decorative Divider */}
           <div className="flex items-center justify-center my-12">
@@ -276,13 +289,13 @@ export default function App() {
             </h3>
 
             <p className="text-center text-sm mb-8 text-[rgb(var(--color-accent))]">
-              *no later than 25.07.2026
+              No later than 25.07.2026
             </p>
 
             <form onSubmit={handleSubmit}>
               <div className="mb-8">
                 <label className="block text-center text-sm mb-3 text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">
-                  Your name
+                  Your full name
                 </label>
                 <input
                   type="text"
@@ -358,8 +371,17 @@ export default function App() {
             </p>
 
             <a href="tel:+250785036809" className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
-              +250 785 036 809 <br/> +1 (832) 865-8481
+              +250 785 036 809 <br/>
             </a>
+           <a
+            href="https://wa.me/18328658481"
+            target="_blank"
+             rel="noopener noreferrer"
+         className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors"
+      style={{ fontFamily: 'Tangerine, cursive' }}
+       >
+           +1 (832) 865-8481
+             </a>
 
             <div className="flex items-center justify-center my-6">
               <div className="w-8 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
@@ -372,8 +394,18 @@ export default function App() {
             </p>
 
             <a href="tel:+15012471822" className="block text-center text-3xl hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
-              +250 795 975 619 <br/> +1 (501) 247-1822
+              +250 795 975 619 <br/> <br/>
             </a>
+            <a
+  href="https://wa.me/15012471822"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors"
+  style={{ fontFamily: 'Tangerine, cursive' }}
+>
+  +1 (501) 247-1822
+</a>
+
           </div>
 
           {/* Couple Image */}
@@ -408,7 +440,7 @@ export default function App() {
             </p>
 
             <p className="text-2xl text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
-              26 • 09 • 2026
+              27 • 09 • 2026
             </p>
           </div>
         </div>

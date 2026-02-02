@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Heart } from 'lucide-react';
+import { attendanceStorage } from './utils/attendanceStorage';
 
 
 
@@ -40,10 +41,28 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    
+    if (!name || willAttend === null) {
+      return;
+    }
+
+    try {
+      await attendanceStorage.saveRecord({
+        name: name.trim(),
+        willAttend,
+      });
+      
+      setSubmitted(true);
+      setName('');
+      setWillAttend(null);
+      
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Error saving attendance record:', error);
+      alert('There was an error saving your response. Please try again.');
+    }
   };
 
   return (

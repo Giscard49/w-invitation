@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Heart } from 'lucide-react';
 import { attendanceStorage } from './utils/attendanceStorage';
+import { AttendanceAdmin } from './components/AttendanceAdmin';
+import { AdminLogin } from './components/AdminLogin';
 
 
 
@@ -8,12 +10,88 @@ export default function App() {
   const [name, setName] = useState('');
   const [willAttend, setWillAttend] = useState<boolean | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [isAdminView, setIsAdminView] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
+
+  // Check URL hash for admin view and authentication
+  useEffect(() => {
+    const hash = window.location.hash;
+    const shouldShowAdmin = hash === '#admin';
+    setIsAdminView(shouldShowAdmin);
+    
+    // Check if user is already authenticated (with session expiration)
+    if (shouldShowAdmin) {
+      const authStatus = localStorage.getItem('admin_authenticated');
+      const authTime = localStorage.getItem('admin_authenticated_at');
+      
+      if (authStatus === 'true' && authTime) {
+        // Check if session is still valid (24 hours)
+        const authDate = new Date(authTime);
+        const now = new Date();
+        const hoursSinceAuth = (now.getTime() - authDate.getTime()) / (1000 * 60 * 60);
+        
+        if (hoursSinceAuth < 24) {
+          setIsAuthenticated(true);
+        } else {
+          // Session expired
+          localStorage.removeItem('admin_authenticated');
+          localStorage.removeItem('admin_authenticated_at');
+          setIsAuthenticated(false);
+        }
+      } else {
+        setIsAuthenticated(false);
+      }
+    }
+    
+    const handleHashChange = () => {
+      const newHash = window.location.hash;
+      const shouldShow = newHash === '#admin';
+      setIsAdminView(shouldShow);
+      if (shouldShow) {
+        const authStatus = localStorage.getItem('admin_authenticated');
+        const authTime = localStorage.getItem('admin_authenticated_at');
+        
+        if (authStatus === 'true' && authTime) {
+          const authDate = new Date(authTime);
+          const now = new Date();
+          const hoursSinceAuth = (now.getTime() - authDate.getTime()) / (1000 * 60 * 60);
+          
+          if (hoursSinceAuth < 24) {
+            setIsAuthenticated(true);
+          } else {
+            localStorage.removeItem('admin_authenticated');
+            localStorage.removeItem('admin_authenticated_at');
+            setIsAuthenticated(false);
+          }
+        } else {
+          setIsAuthenticated(false);
+        }
+      } else {
+        setIsAuthenticated(false);
+      }
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleAdminLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleAdminLogout = () => {
+    localStorage.removeItem('admin_authenticated');
+    localStorage.removeItem('admin_authenticated_at');
+    setIsAuthenticated(false);
+    window.location.hash = '';
+    setIsAdminView(false);
+  };
 
   // Countdown timer
   useEffect(() => {
@@ -65,8 +143,18 @@ export default function App() {
     }
   };
 
+  // Show admin view if hash is #admin
+  if (isAdminView) {
+    if (!isAuthenticated) {
+      return <AdminLogin onLogin={handleAdminLogin} />;
+    }
+    return <AttendanceAdmin onLogout={handleAdminLogout} />;
+  }
+
   return (
     <div className="min-h-screen bg-[#fafaf9]">
+     
+     
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-start px-6 py-16 relative overflow-hidden">
         {/* Decorative Background Elements */}

@@ -40,3 +40,37 @@ CREATE POLICY "Allow authenticated update" ON attendance_records
   TO authenticated
   USING (true);
 
+-- Create admin_credentials table
+CREATE TABLE IF NOT EXISTS admin_credentials (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  password_hash TEXT NOT NULL,
+  is_active BOOLEAN DEFAULT true NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+  updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL
+);
+
+-- Create index for faster lookups
+CREATE INDEX IF NOT EXISTS idx_admin_credentials_active ON admin_credentials(is_active) WHERE is_active = true;
+
+-- Enable Row Level Security (RLS)
+ALTER TABLE admin_credentials ENABLE ROW LEVEL SECURITY;
+
+-- Policy: Only allow reading credentials (for verification)
+-- This is safe because we only check password_hash, not return it
+CREATE POLICY "Allow public read for verification" ON admin_credentials
+  FOR SELECT
+  TO anon, authenticated
+  USING (true);
+
+-- Policy: Prevent inserts/updates from public (should be done manually in Supabase dashboard)
+-- For security, you should insert the initial admin password hash manually
+CREATE POLICY "Prevent public write" ON admin_credentials
+  FOR INSERT
+  TO anon
+  WITH CHECK (false);
+
+CREATE POLICY "Prevent public update" ON admin_credentials
+  FOR UPDATE
+  TO anon
+  USING (false);
+

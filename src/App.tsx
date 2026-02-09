@@ -3,13 +3,6 @@ import { MapPin, Heart } from 'lucide-react';
 import { attendanceStorage } from './utils/attendanceStorage';
 import { AttendanceAdmin } from './components/AttendanceAdmin';
 import { AdminLogin } from './components/AdminLogin';
-import Photo1 from "../assets/Photo1.jpeg";
-import Photo2 from "../assets/Photo2.jpeg";
-import Photo3 from "../assets/photo3.jpg";
-import IMG_7619 from "../assets/IMG_7619.jpg";
-
-
-
 
 
 
@@ -207,12 +200,11 @@ export default function App() {
 
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10 animate-scaleIn" style={{ animationDelay: '0.6s' }}>
-        
             <img
-           src='/src/asset/Photo1.jpeg'
-          alt="Couple"
-             className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-               />
+              src="/src/asset/Photo1.jpeg"
+              alt="Couple"
+              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+            />
           </div>
         </div>
       </section>

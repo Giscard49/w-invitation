@@ -4,8 +4,8 @@ import { attendanceStorage } from './utils/attendanceStorage';
 import { AttendanceAdmin } from './components/AttendanceAdmin';
 import { AdminLogin } from './components/AdminLogin';
 import Photo1 from "../src/asset/Photo1.jpeg";
-import photo3 from "../src/asset/photo3.jpg";
-import photo4 from "../src/asset/photo4.jpg";
+import photo3 from "../src/asset/photo3.jpeg";
+import photo4 from "../src/asset/photo4.jpeg";
 
 
 

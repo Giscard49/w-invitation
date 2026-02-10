@@ -3,6 +3,8 @@ import { MapPin, Heart } from 'lucide-react';
 import { attendanceStorage } from './utils/attendanceStorage';
 import { AttendanceAdmin } from './components/AttendanceAdmin';
 import { AdminLogin } from './components/AdminLogin';
+import Photo1 from "../src/asset/Photo1.jpeg";
+
 
 
 
@@ -185,7 +187,7 @@ export default function App() {
 
           {/* Couple Names */}
           <h1 className="text-5xl mb-6 text-center animate-fadeInUp" style={{ fontFamily: 'Tangerine, cursive', animationDelay: '0.3s' }}>
-            Giscard & CeAnnaaa
+            Giscard & CeAnna
           </h1>
 
           {/* Main Heading */}
@@ -200,11 +202,12 @@ export default function App() {
 
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10 animate-scaleIn" style={{ animationDelay: '0.6s' }}>
-            <img
-              src="/src/asset/Photo1.jpeg"
-              alt="Couple"
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-            />
+          
+               <img
+                src='/src/asset/Photo1.jpeg'
+                alt="Couple"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                />
           </div>
         </div>
       </section>

@@ -366,9 +366,9 @@ export default function App() {
         strokeWidth={1.5}
       />
       <div className="text-center">
-        <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero</p>
+        <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero, Kigali</p>
         <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed">
-          Address:{" "}
+         Get Directions to{" "}
           <span className="underline decoration-dotted underline-offset-4">
             KK 553 St
           </span>
@@ -393,7 +393,7 @@ export default function App() {
             </h3>
 
             <p className="text-center text-sm mb-8 text-[rgb(var(--color-accent))]">
-              No later than 25.07.2026
+              No later than 25.08.2026
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -444,7 +444,7 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                  <span className="text-base">No, unfortunately I can't attend😢</span>
+                  <span className="text-base">Unable to attend😢</span>
                 </label>
               </div>
 

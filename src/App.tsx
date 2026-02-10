@@ -515,26 +515,33 @@ export default function App() {
               +250 795 975 619 <br/> <br/>
             </a>
             <a
-  href="https://wa.me/15012471822"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors"
-  style={{ fontFamily: 'Tangerine, cursive' }}
->
-  +1 (501) 247-1822
-</a>
+               href="https://wa.me/15012471822"
+                target="_blank"
+                rel="noopener noreferrer"
+                 className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors"
+                 style={{ fontFamily: 'Tangerine, cursive' }}
+                   >
+                   +1 (501) 247-1822
+                 </a>
 
           </div>
 
+         {/* Decorative Divider */}
+          <div className="flex items-center justify-center my-12">
+            <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+            <div className="w-3 h-3 rounded-full bg-[rgb(var(--color-accent))]/30 mx-4" />
+            <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+          </div>
+
           {/* Couple Image */}
-          <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
+          {/* <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
             
             <img
                 src={photo3}
                 alt="Couple C"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -554,7 +561,7 @@ export default function App() {
               <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
             </div>
 
-            <p className="text-3xl font-serif mb-3 tracking-wide">
+            <p className="text-2xl font-serif mb-3 tracking-wide">
               Giscard and CeAnna
             </p>
 

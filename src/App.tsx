@@ -336,9 +336,10 @@ export default function App() {
 
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
+            
             <img
                 src={photo4}
-                alt="Couple"
+                alt="Couple b"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 />
           </div>
@@ -522,9 +523,10 @@ export default function App() {
 
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
+            
             <img
                 src={photo3}
-                alt="Couple"
+                alt="Couple C"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 />
           </div>

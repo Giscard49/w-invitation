@@ -170,12 +170,12 @@ export default function App() {
           <div className="flex justify-between w-full mb-12 text-sm animate-fadeInUp">
             <div className="text-center">
               <div className="text-lg font-semibold mb-1 tracking-wide">Heaven Garden</div>
-              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Location</div>
+              <div className="text-4xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Location</div>
             </div>
             <div className="w-px bg-gradient-to-b from-transparent via-[rgb(var(--color-border))] to-transparent" />
             <div className="text-center">
               <div className="text-lg font-semibold mb-1 tracking-wide">27.09.2026</div>
-              <div className="text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Date</div>
+              <div className="text-4xs text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">Date</div>
             </div>
           </div>
 
@@ -485,7 +485,7 @@ export default function App() {
 
           <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-10 shadow-lg shadow-black/5 border border-white/80">
             <p className="text-center text-base leading-relaxed mb-4 text-[rgb(var(--color-text-secondary))]">
-              If you have any questions, feel free to contact the groom at
+              If you have any questions, feel free to contact <br/> <br/>The Groom at:
             </p>
 
             <a href="tel:+250785036809" className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
@@ -508,7 +508,7 @@ export default function App() {
             </div>
 
             <p className="text-center text-base mb-4 text-[rgb(var(--color-text-secondary))]">
-              the bride at
+              The Bride at
             </p>
 
             <a href="tel:+15012471822" className="block text-center text-3xl hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>

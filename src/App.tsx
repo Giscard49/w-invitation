@@ -185,7 +185,7 @@ export default function App() {
 
           {/* Couple Names */}
           <h1 className="text-5xl mb-6 text-center animate-fadeInUp" style={{ fontFamily: 'Tangerine, cursive', animationDelay: '0.3s' }}>
-            Giscard & CeAnna
+            Giscard & CeAnnaaa
           </h1>
 
           {/* Main Heading */}

@@ -252,7 +252,7 @@ export default function App() {
 
           {/* Date Button */}
           <div className="flex justify-center mb-4">
-            <div className="px-10 py-3 bg-white border border-[rgb(var(--color-border))] rounded-full text-sm shadow-sm hover:shadow-md transition-shadow">
+            <div className="px-10 py-4 bg-white border border-[rgb(var(--color-border))] rounded-full text-sm shadow-sm hover:shadow-md transition-shadow">
               September 27, 2026
             </div>
           </div>
@@ -271,18 +271,23 @@ export default function App() {
                 <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">11:00</span>
                 <span className="text-[rgb(var(--color-text-secondary))]">  <i>Introduction & Dowry</i></span>
               </div>
+              
               <div className="flex items-start gap-3">
                 <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">3:00 </span>
-                <span className="text-[rgb(var(--color-text-secondary))]">Church</span>
+                <span className="text-[rgb(var(--color-text-secondary))]"> <i>Church Services</i></span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">6:00 </span>
-                <span className="text-[rgb(var(--color-text-secondary))]">Reception </span>
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">4:00 </span>
+                <span className="text-[rgb(var(--color-text-secondary))]"> <i>Capturing Memories </i></span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">6:30 </span>
+                <span className="text-[rgb(var(--color-text-secondary))]"><i>Wedding Reception</i> </span>
               </div>
               
               <div className="flex items-start gap-3">
                 <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">10:00</span>
-                <span className="text-[rgb(var(--color-text-secondary))]">Thank you for making our special day unforgettable.</span>
+                <span className="text-[rgb(var(--color-text-secondary))]"> <i>We are deeply grateful for your presence and love</i>.</span>
               </div>
             </div>
 

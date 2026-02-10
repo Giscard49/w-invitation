@@ -4,6 +4,9 @@ import { attendanceStorage } from './utils/attendanceStorage';
 import { AttendanceAdmin } from './components/AttendanceAdmin';
 import { AdminLogin } from './components/AdminLogin';
 import Photo1 from "../src/asset/Photo1.jpeg";
+import Photo2 from "../src/asset/Photo2.jpeg";
+import photo3 from "../src/asset/photo3.jpg";
+import photo4 from "../src/asset/photo4.jpg";
 
 
 
@@ -99,7 +102,7 @@ export default function App() {
   useEffect(() => {
     const targetDate = new Date('2026-09-27T11:00:00');
 
-    const updateTimer = () => {
+      const updateTimer = () => {
       const now = new Date();
       const distance = targetDate.getTime() - now.getTime();
 
@@ -335,10 +338,10 @@ export default function App() {
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
             <img
-              src="/src/asset/IMG_7619.JPG"
-              alt="Couple "
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-            />
+                src={photo4}
+                alt="Couple"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                />
           </div>
         </div>
       </section>
@@ -521,10 +524,10 @@ export default function App() {
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
             <img
-              src="/src/asset/photo3.JPG"
-              alt="Couple"
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-            />
+                src={photo3}
+                alt="Couple"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                />
           </div>
         </div>
       </section>

@@ -323,21 +323,7 @@ export default function App() {
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-tl from-[#f5f0eb]/30 to-transparent rounded-full blur-3xl" />
         
         <div className="w-full max-w-md relative z-10">
-          {/* <h3 className="text-5xl mb-8 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
-            Starts in
-          </h3> */}
-
-          {/* <div className="text-center mb-10 bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg shadow-black/5 border border-white/80">
-            <div className="text-5xl mb-4 tracking-[0.15em] font-light tabular-nums">
-              {timeLeft.days} : {String(timeLeft.hours).padStart(2, '0')} : {String(timeLeft.minutes).padStart(2, '0')} : {String(timeLeft.seconds).padStart(2, '0')}
-            </div>
-            <div className="flex justify-center gap-10 text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
-              <span>Days</span>
-              <span>Hours</span>
-              <span>Minutes</span>
-              <span>Seconds</span>
-            </div>
-          </div> */}
+         
 
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">

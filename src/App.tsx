@@ -426,7 +426,7 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                  <span className="text-base">I will attend</span>
+                  <span className="text-base">I will attend 😊</span>
                 </label>
 
                 <label className="flex items-center gap-4 cursor-pointer group p-3 rounded-xl hover:bg-gray-50/50 transition-colors">
@@ -444,7 +444,7 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                  <span className="text-base">No, unfortunately I can't attend 😢</span>
+                  <span className="text-base">No, unfortunately I can't attend😢</span>
                 </label>
               </div>
 

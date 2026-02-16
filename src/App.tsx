@@ -160,7 +160,7 @@ export default function App() {
      
      
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-14 relative overflow-hidden">
+      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-16 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#f5f0eb]/30 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#faf5f0]/40 to-transparent rounded-full blur-3xl" />
@@ -215,11 +215,7 @@ export default function App() {
       </section>
 
       {/* Dear Friends Section */}
-<<<<<<< HEAD
       <section className="min-h-screen flex flex-col items-center justify-start px-4 py-2 relative">
-=======
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-8 relative">
->>>>>>> 038bc4fda104a1b58bf337065699dc754e5b356b
         <div className="absolute top-20 right-10 w-48 h-48 bg-gradient-to-bl from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -342,11 +338,7 @@ export default function App() {
       </section>
 
       {/* Dress Code & Location */}
-<<<<<<< HEAD
       <section className="min-h-screen flex flex-col items-center justify-start px-6 py-10 relative">
-=======
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-8 relative">
->>>>>>> 038bc4fda104a1b58bf337065699dc754e5b356b
         <div className="absolute top-32 left-8 w-52 h-52 bg-gradient-to-br from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -367,7 +359,7 @@ export default function App() {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-8 mb-8 shadow-xl shadow-black/5 cursor-pointer hover:shadow-2xl transition">
+  <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-8 mb-12 shadow-xl shadow-black/5 cursor-pointer hover:shadow-2xl transition">
     <div className="flex items-start gap-4 justify-center">
       <MapPin
         className="w-6 h-6 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0"
@@ -388,7 +380,7 @@ export default function App() {
 
 
           {/* Decorative Divider */}
-          <div className="flex items-center justify-center my-6">
+          <div className="flex items-center justify-center my-12">
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
             <div className="w-3 h-3 rounded-full bg-[rgb(var(--color-accent))]/30 mx-4" />
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
@@ -521,7 +513,7 @@ export default function App() {
           </div>
 
          {/* Decorative Divider */}
-          <div className="flex items-center justify-center my-6">
+          <div className="flex items-center justify-center my-12">
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
             <div className="w-3 h-3 rounded-full bg-[rgb(var(--color-accent))]/30 mx-4" />
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
@@ -540,11 +532,7 @@ export default function App() {
       </section>
 
       {/* Final Message */}
-<<<<<<< HEAD
       <section className="flex flex-col items-center justify-center px-6 py-10 relative overflow-hidden">
-=======
-      <section className="flex flex-col items-center justify-center px-6 py-8 relative overflow-hidden">
->>>>>>> 038bc4fda104a1b58bf337065699dc754e5b356b
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#f5f0eb]/20 to-[#faf5f0]/20 rounded-full blur-3xl" />
         
         <div className="w-full max-w-md text-center relative z-10">

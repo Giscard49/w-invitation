@@ -215,7 +215,7 @@ export default function App() {
       </section>
 
       {/* Dear Friends Section */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-16 relative">
+      <section className="min-h-screen flex flex-col items-center justify-start px-4 py-2 relative">
         <div className="absolute top-20 right-10 w-48 h-48 bg-gradient-to-bl from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -261,7 +261,7 @@ export default function App() {
 
       {/* Schedule Details */}
       <section className="min-h-screen flex flex-col items-center justify-start px-5 py-10 relative">
-        <div className="absolute top-40 left-10 w-56 h-56 bg-gradient-to-br from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
+        <div className="absolute top-40 left-10 w-54 h-56 bg-gradient-to-br from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
           {/* Schedule Box */}
@@ -338,7 +338,7 @@ export default function App() {
       </section>
 
       {/* Dress Code & Location */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-16 relative">
+      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-10 relative">
         <div className="absolute top-32 left-8 w-52 h-52 bg-gradient-to-br from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -532,7 +532,7 @@ export default function App() {
       </section>
 
       {/* Final Message */}
-      <section className="flex flex-col items-center justify-center px-6 py-16 relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center px-6 py-10 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#f5f0eb]/20 to-[#faf5f0]/20 rounded-full blur-3xl" />
         
         <div className="w-full max-w-md text-center relative z-10">

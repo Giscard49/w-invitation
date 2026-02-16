@@ -324,7 +324,12 @@ export default function App() {
         
         <div className="w-full max-w-md relative z-10">
          
-
+     {/* Decorative Divider */}
+            <div className="flex items-center justify-center my-8">
+              <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+              <Heart className="w-4 h-4 mx-3 text-[rgb(var(--color-accent))]/40 fill-[rgb(var(--color-accent))]/40" />
+              <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+            </div>
           {/* Couple Image */}
           <div className="w-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/10">
             
@@ -336,7 +341,12 @@ export default function App() {
           </div>
         </div>
       </section>
-
+      {/* Decorative Divider */}
+            <div className="flex items-center justify-center my-8">
+              <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+              <Heart className="w-4 h-4 mx-3 text-[rgb(var(--color-accent))]/40 fill-[rgb(var(--color-accent))]/40" />
+              <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
+            </div>
       {/* Dress Code & Location */}
       <section className="flex flex-col items-center justify-start px-6 py-10 relative">
         <div className="absolute top-32 left-8 w-52 h-52 bg-gradient-to-br from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
@@ -367,11 +377,9 @@ export default function App() {
       />
       <div className="text-center">
         <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero, Kigali</p>
-        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed">
-         Get Directions to{" "}
-          <span className="underline decoration-dotted underline-offset-4">
-            KK 553 St
-          </span>
+        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed text-center underline decoration-dotted underline-offset-4">
+        View Location{" "}
+
         </p>
       </div>
     </div>
@@ -459,13 +467,14 @@ export default function App() {
           </div>
         </div>
       </section>
+                 <br/> <br/>
 
       {/* Contact Information */}
       <section className="flex flex-col items-center justify-start px-6 py-12 relative">
         <div className="absolute top-30 right-8 w-56 h-56 bg-gradient-to-bl from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
-          <h3 className="text-5xl mb-10 text-center leading-tight" style={{ fontFamily: 'Tangerine, cursive' }}>
+          <h3 className="text-5xl mb-12 text-center leading-tight" style={{ fontFamily: 'Tangerine, cursive' }}>
             Contact<br />Information
           </h3>
 
@@ -547,9 +556,10 @@ export default function App() {
               <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[rgb(var(--color-border))] to-transparent" />
             </div>
 
-            <p className="text-2xl font-serif mb-3 tracking-wide">
-              Giscard and CeAnna
+            <p className="text-2xl mb-3 tracking-wide" style={{ fontFamily: "'Baskerville', serif" }}>
+               Giscard and CeAnna
             </p>
+
 
             <p className="text-2xl text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
               27 • 09 • 2026
@@ -557,6 +567,8 @@ export default function App() {
           </div>
         </div>
       </section>
+      <br/> <br/>
     </div>
+    
   );
 }

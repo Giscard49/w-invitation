@@ -225,15 +225,15 @@ export default function App() {
 
           <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg shadow-black/5 border border-white/80">
             <p className="text-center text-base leading-relaxed mb-6 text-[rgb(var(--color-text-secondary))]">
-              With joyful hearts and deep gratitude, we invite you to share in one of the most meaningful days of our lives as we celebrate our wedding and the beginning of our forever together.
+              With hearts full of joy and gratitude, we warmly invite you to join us as we celebrate one of the most meaningful days of our lives, our wedding and the beginning of our forever together.
             </p>
 
             <p className="text-center text-base leading-relaxed mb-6 text-[rgb(var(--color-text-secondary))]">
-              We hope you will join us for an evening filled with love, happiness, laughter, and dancing, surrounded by the people who have touched our lives and supported our journey.
+              We hope you’ll be part of a day filled with love, laughter, happiness, and dancing, surrounded by the cherished people who have shaped and supported our journey.
             </p>
 
             <p className="text-center text-base leading-relaxed text-[rgb(var(--color-text-secondary))]">
-              Your presence would be the greatest gift as we create memories that will last a lifetime. We cannot wait to celebrate this special moment with you.
+              Your presence is the greatest gift we could ask for, and we look forward to creating beautiful memories with you that will last a lifetime. We cannot wait to share this special moment with you.
             </p>
           </div>
 

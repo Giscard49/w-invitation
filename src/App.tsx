@@ -260,7 +260,7 @@ export default function App() {
       </section>
 
       {/* Schedule Details */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-5 py-10 relative">
+      <section className="flex flex-col items-center justify-start px-5 py-10 relative">
         <div className="absolute top-40 left-10 w-54 h-56 bg-gradient-to-br from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -319,7 +319,7 @@ export default function App() {
       </section>
 
       {/* Countdown with Image */}
-      <section className="min-h-screen flex flx-col items-center justify-center px-6 py-12 relative">
+      <section className="flex flx-col items-center justify-center px-6 py-12 relative">
         <div className="absolute bottom-20 right-10 w-64 h-64 bg-gradient-to-tl from-[#f5f0eb]/30 to-transparent rounded-full blur-3xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -338,7 +338,7 @@ export default function App() {
       </section>
 
       {/* Dress Code & Location */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-10 relative">
+      <section className="flex flex-col items-center justify-start px-6 py-10 relative">
         <div className="absolute top-32 left-8 w-52 h-52 bg-gradient-to-br from-[#f0ebe6]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
@@ -461,7 +461,7 @@ export default function App() {
       </section>
 
       {/* Contact Information */}
-      <section className="min-h-screen flex flex-col items-center justify-start px-6 py-12 relative">
+      <section className="flex flex-col items-center justify-start px-6 py-12 relative">
         <div className="absolute top-30 right-8 w-56 h-56 bg-gradient-to-bl from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">

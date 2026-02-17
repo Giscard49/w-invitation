@@ -401,7 +401,7 @@ export default function App() {
             </h3>
 
             <p className="text-center text-sm mb-8 text-[rgb(var(--color-accent))]">
-              No later than 25.08.2026
+              No later than 25.07.2026
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -467,7 +467,77 @@ export default function App() {
           </div>
         </div>
       </section>
-                 <br/> <br/>
+
+     <section className="flex flex-col items-center justify-start px-6 py-12 relative">
+        <div className="absolute top-30 right-8 w-56 h-56 bg-gradient-to-bl from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
+        
+        <div className="w-full max-w-md relative z-10"> <br/> <br/>
+          <h3 className="text-5xl mb-12 text-center leading-tight" style={{ fontFamily: 'Tangerine, cursive' }}>
+            Honeymoon & New Beginnings Fund
+          </h3>
+
+  <br />
+
+  <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg shadow-black/5 border border-white/80">
+    <p className="text-center text-base leading-relaxed mb-6 text-[rgb(var(--color-text-secondary))]">
+      Your presence at our wedding is the greatest gift we could receive.
+    </p>
+
+    <p className="text-center text-base leading-relaxed mb-6 text-[rgb(var(--color-text-secondary))]">
+      For those who have asked how to bless us as we begin this new chapter,
+      we’ve created a Honeymoon & New Beginnings Fund. Your love and support
+      will help us build lasting memories and start our life together with joy
+      and intention.
+    </p>
+
+    <div className="text-center text-base leading-relaxed text-[rgb(var(--color-text-secondary))]">
+      <p>For those who wish to contribute, gifts may be sent via:</p>
+
+      <br />
+
+      <div className="flex flex-col items-center gap-3 font-medium">
+        {/* Cash App */}
+        <a
+          href="https://cash.app/$CeAnnaStokes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-600 hover:underline"
+        >
+          • Cash App
+        </a>
+
+        {/* Mobile Money USSD Dial */}
+        <a
+          href="tel:*182*1*1*0785036809%23"
+          className="text-green-600 hover:underline"
+        >
+          • Mobile Money (MoMo)
+        </a>
+
+        {/* Equity Bank */}
+        <a
+          href="https://equitygroupholdings.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          • Equity Bank Account
+        </a>
+      </div>
+
+      <br />
+      
+      <p>
+        We are deeply grateful for your love, prayers, and generosity.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <br />
+  <br />
+</section>
+
 
       {/* Contact Information */}
       <section className="flex flex-col items-center justify-start px-6 py-12 relative">
@@ -557,7 +627,7 @@ export default function App() {
             </div>
 
             <p className="text-2xl mb-3 tracking-wide" style={{ fontFamily: "'Baskerville', serif" }}>
-               Giscard and CeAnna
+               G & C
             </p>
 
 

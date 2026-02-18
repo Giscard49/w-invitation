@@ -519,7 +519,7 @@ export default function App() {
       • 👉🏾 Mobile Money (MoMo)
     </a>
       <a
-       href="tel:zelle://pay/5012404031"
+       href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiR1dFTkRPTFlOIiwiYWN0aW9uIjoicGF5bWVudCIsInRva2VuIjoiNTAxMjQwNDAzMSJ9"
         className="text-blue-600 hover:text-blue-800 hover:underline"
         >
         • 👉🏾 Zelle

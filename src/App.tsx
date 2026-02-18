@@ -7,7 +7,7 @@ import Photo1 from "../src/asset/Photo1.jpeg";
 import photo3 from "../src/asset/photo3.jpeg";
 import photo4 from "../src/asset/photo4.jpeg";
 import mtn from "../src/asset/mtn.png";
-import zelle from "../src/asset/zelle.png";
+import Zelle from "../src/asset/Zelle.png";
 import cashapp from "../src/asset/cashapp.png";
 
 
@@ -540,7 +540,7 @@ export default function App() {
   className="flex items-center text-blue-600 hover:text-blue-800 hover:underline gap-3"
 >
   <img
-    src={zelle}
+    src={Zelle}
     alt="Zelle"
     className="w-6 h-6"
   />

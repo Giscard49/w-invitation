@@ -264,29 +264,27 @@ export default function App() {
         <div className="absolute top-40 left-10 w-54 h-56 bg-gradient-to-br from-[#ebe6e1]/20 to-transparent rounded-full blur-2xl" />
         
         <div className="w-full max-w-md relative z-10">
+          <br/>
           {/* Schedule Box */}
           <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-10 mb-12 shadow-xl shadow-black/5">
-            <div className="space-y-5 text-base">
+            <div className="space-y-5 text-base"> <br/> <br/>
               <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">11:00</span>
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">10:00 :</span>
                 <span className="text-[rgb(var(--color-text-secondary))]">  <i>Introduction & Dowry</i></span>
               </div>
               
               <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">3:00 </span>
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">3:00 :</span>
                 <span className="text-[rgb(var(--color-text-secondary))]"> <i>Church Services</i></span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">4:00 </span>
-                <span className="text-[rgb(var(--color-text-secondary))]"> <i>Capturing Memories </i></span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">6:30 </span>
-                <span className="text-[rgb(var(--color-text-secondary))]"><i>Wedding Reception</i> </span>
               </div>
               
               <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">10:00</span>
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">5:00 :</span>
+                <span className="text-[rgb(var(--color-text-secondary))]"><i>Wedding Reception</i> </span>
+              </div>
+              <br/> <br/>
+              <div className="flex items-start gap-3">
+            
                 <span className="text-[rgb(var(--color-text-secondary))]"> <i>We are deeply grateful for your presence and love</i>.</span>
               </div>
             </div>
@@ -308,11 +306,11 @@ export default function App() {
             <div className="text-3xl mb-8 tracking-[0.15em] font-light tabular-nums">
               {timeLeft.days} : {String(timeLeft.hours).padStart(2, '0')} : {String(timeLeft.minutes).padStart(2, '0')} : {String(timeLeft.seconds).padStart(2, '0')}
             </div>
-            <div className="flex justify-center gap-4 text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
+            <div className="flex justify-center gap-10 text-xs text-[rgb(var(--color-text-secondary))] uppercase tracking-widest">
               <span>Days</span>
               <span>Hours</span>
-              <span>Minutes</span>
-              <span>Seconds</span>
+              <span>Min</span>
+              <span>Sec</span>
             </div>
           </div>
         </div>
@@ -377,7 +375,7 @@ export default function App() {
       />
       <div className="text-center">
         <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero, Kigali</p>
-        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed text-center underline decoration-dotted underline-offset-4">
+        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed text-right underline decoration-dotted underline-offset-4">
         View Location{" "}
 
         </p>
@@ -476,7 +474,6 @@ export default function App() {
             Honeymoon & New Beginnings Fund
           </h3>
 
-  <br />
 
   <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg shadow-black/5 border border-white/80">
     <p className="text-center text-base leading-relaxed mb-6 text-[rgb(var(--color-text-secondary))]">
@@ -495,7 +492,7 @@ export default function App() {
 
       <br />
 
-      <div className="flex flex-col items-start gap-3 font-medium">
+      <div className="flex flex-col items-start gap-3 font-medium font-semibold">
         {/* Cash App */}
         <a
           href="https://cash.app/$CeAnnaStokes"

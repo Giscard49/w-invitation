@@ -140,7 +140,7 @@ export default function App() {
       setName('');
       setWillAttend(null);
       
-      setTimeout(() => setSubmitted(false), 3000);
+      setTimeout(() => setSubmitted(false), 15000);
     } catch (error) {
       console.error('Error saving attendance record:', error);
       alert('There was an error saving your response. Please try again.');
@@ -399,7 +399,7 @@ export default function App() {
             </h3>
 
             <p className="text-center text-sm mb-8 text-[rgb(var(--color-accent))]">
-              No later than 25.07.2026
+              No later than 28.07.2026
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -450,7 +450,7 @@ export default function App() {
                       </div>
                     )}
                   </div>
-                  <span className="text-base">Unable to attend😢</span>
+                  <span className="text-base">Unable to attend 😢</span>
                 </label>
               </div>
 
@@ -461,6 +461,14 @@ export default function App() {
               >
                 {submitted ? '✓ Submitted!' : 'Submit'}
               </button>
+          {/* Confirmation message */}
+               {submitted && (
+              <p className="mt-4 text-center text-green-600 font-medium">
+              Your RSVP has been noted, We appreciate you letting us know! 💖
+                </p>
+                   )}
+    
+
             </form>
           </div>
         </div>
@@ -492,26 +500,34 @@ export default function App() {
 
       <br />
 
-      <div className="flex flex-col items-start gap-3 font-medium font-semibold">
-        {/* Cash App */}
-        <a
-          href="https://cash.app/$CeAnnaStokes"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-pink-600 hover:underline"
-        >
-          • 👉🏾 Cash App
-        </a>
+     <div className="flex items-center justify-center bg-gray-100">
+  <div className="bg-white p-8 rounded-3xl shadow-lg flex flex-col items-start gap-4 font-semibold ">
+    
+    <a
+      href="https://cash.app/$CeAnnaStokes"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 hover:underline"
+    >
+      • 👉🏾 Cash App
+    </a>
 
-        {/* Mobile Money USSD Dial */}
-        <a
-          href="tel:*182*1*1*0785036809%23"
-          className="text-green-600 hover:underline"
+    <a
+      href="tel:*182*1*1*0785036809%23"
+      className="text-blue-600 hover:text-blue-800 hover:underline"
+    >
+      • 👉🏾 Mobile Money (MoMo)
+    </a>
+      <a
+       href="tel:zelle://pay/5012404031"
+        className="text-blue-600 hover:text-blue-800 hover:underline"
         >
-          • 👉🏾Mobile Money (MoMo)
-        </a>
+        • 👉🏾 Zelle
+      </a>
 
-      </div>
+  </div>
+</div>
+
 
       <br />
       
@@ -564,7 +580,7 @@ export default function App() {
               The Bride at
             </p>
 
-            <a href="tel:+15012471822" className="block text-center text-3xl hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
+            <a href="tel:+250795975619" className="block text-center text-3xl hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
               +250 795 975 619 <br/> <br/>
             </a>
             <a

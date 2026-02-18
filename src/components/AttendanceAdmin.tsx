@@ -174,14 +174,17 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
             className="px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center gap-2"
           >
             <Download className="w-4 h-4" />
-            Export JSON
+             Export JSON
           </button>
+
+        <br/>
+
           <button
             onClick={handleExportCSV}
             className="px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center gap-2"
           >
             <Download className="w-4 h-4" />
-            Export CSV
+             Export CSV
           </button>
           {records.length > 0 && (
             <button
@@ -189,7 +192,7 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
               className="px-6 py-3 bg-red-600/80 hover:bg-red-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
             >
               <Trash2 className="w-4 h-4" />
-              Clear All
+              Del All
             </button>
           )}
         </div>

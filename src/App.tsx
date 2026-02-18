@@ -6,7 +6,9 @@ import { AdminLogin } from './components/AdminLogin';
 import Photo1 from "../src/asset/Photo1.jpeg";
 import photo3 from "../src/asset/photo3.jpeg";
 import photo4 from "../src/asset/photo4.jpeg";
-
+import mtn from "../src/asset/mtn.png";
+import zelle from "../src/asset/zelle.png";
+import cashapp from "../src/asset/cashapp.png";
 
 
 
@@ -285,7 +287,7 @@ export default function App() {
               <br/> <br/>
               <div className="flex items-start gap-3">
             
-                <span className="text-[rgb(var(--color-text-secondary))]"> <i>We are deeply grateful for your presence and love</i>.</span>
+                <span className="text-center text-[rgb(var(--color-text-secondary))]"> <i>We are deeply grateful for your presence and love</i>.</span>
               </div>
             </div>
 
@@ -497,33 +499,54 @@ export default function App() {
 
     <div className="text-center text-base leading-relaxed text-[rgb(var(--color-text-secondary))]">
       <p>For those who wish to contribute, gifts may be sent via:</p>
-
+      <br/>
+      <p>Please click on one of the options below.</p>
       <br />
 
      <div className="flex items-center justify-center bg-gray-100">
   <div className="bg-white p-8 rounded-3xl shadow-lg flex flex-col items-start gap-4 font-semibold ">
     
-    <a
+     <a
       href="https://cash.app/$CeAnnaStokes"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 hover:underline"
+      className="flex items-center text-blue-600 hover:text-blue-800 hover:underline gap-3"
     >
-      • 👉🏾 Cash App
+      <img
+        src={cashapp}
+        alt="Cash App"
+        className="w-6 h-6"
+      />
+      Cash App
     </a>
 
+     {/* Mobile Money / MTN */}
     <a
       href="tel:*182*1*1*0785036809%23"
-      className="text-blue-600 hover:text-blue-800 hover:underline"
+      className="flex items-center text-blue-600 hover:text-blue-800 hover:underline gap-3"
     >
-      • 👉🏾 Mobile Money (MoMo)
+      <img
+        src={mtn}
+        alt="MTN Mobile Money"
+        className="w-6 h-6"
+      />
+      Mobile Money (MoMo)
     </a>
-      <a
-       href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiR1dFTkRPTFlOIiwiYWN0aW9uIjoicGF5bWVudCIsInRva2VuIjoiNTAxMjQwNDAzMSJ9"
-        className="text-blue-600 hover:text-blue-800 hover:underline"
-        >
-        • 👉🏾 Zelle
-      </a>
+
+    
+   {/* Zelle */}
+<a
+  href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiR1dFTkRPTFlOIiwiYWN0aW9uIjoicGF5bWVudCIsInRva2VuIjoiNTAxMjQwNDAzMSJ9"
+  className="flex items-center text-blue-600 hover:text-blue-800 hover:underline gap-3"
+>
+  <img
+    src={zelle}
+    alt="Zelle"
+    className="w-6 h-6"
+  />
+  Zelle
+</a>
+
 
   </div>
 </div>

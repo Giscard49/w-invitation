@@ -495,7 +495,7 @@ export default function App() {
 
       <br />
 
-      <div className="flex flex-col items-center gap-3 font-medium">
+      <div className="flex flex-col items-start gap-3 font-medium">
         {/* Cash App */}
         <a
           href="https://cash.app/$CeAnnaStokes"
@@ -503,7 +503,7 @@ export default function App() {
           rel="noopener noreferrer"
           className="text-pink-600 hover:underline"
         >
-          • Cash App
+          • 👉🏾 Cash App
         </a>
 
         {/* Mobile Money USSD Dial */}
@@ -511,7 +511,7 @@ export default function App() {
           href="tel:*182*1*1*0785036809%23"
           className="text-green-600 hover:underline"
         >
-          • Mobile Money (MoMo)
+          • 👉🏾Mobile Money (MoMo)
         </a>
 
         {/* Equity Bank */}
@@ -521,7 +521,7 @@ export default function App() {
           rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
         >
-          • Equity Bank Account
+          • 👉🏾Equity Bank Account
         </a>
       </div>
 

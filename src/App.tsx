@@ -514,15 +514,6 @@ export default function App() {
           • 👉🏾Mobile Money (MoMo)
         </a>
 
-        {/* Equity Bank */}
-        <a
-          href="https://equitygroupholdings.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          • 👉🏾Equity Bank Account
-        </a>
       </div>
 
       <br />

@@ -370,15 +370,16 @@ export default function App() {
   rel="noopener noreferrer"
 >
   <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-8 mb-12 shadow-xl shadow-black/5 cursor-pointer hover:shadow-2xl transition">
-    <div className="flex items-start gap-4 justify-center">
+    <div className="flex items-start gap-2 justify-center">
       <MapPin
         className="w-6 h-6 text-[rgb(var(--color-accent))] mt-1 flex-shrink-0"
         strokeWidth={1.5}
       />
-      <div className="text-center">
+      <div className="text-center ">
         <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero, Kigali</p>
+        
         <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed text-right underline decoration-dotted underline-offset-4">
-        View Location{" "}
+        View Location{" "} 
 
         </p>
       </div>

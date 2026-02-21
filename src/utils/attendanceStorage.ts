@@ -22,8 +22,8 @@ export const attendanceStorage = {
         submitted_at: new Date().toISOString(),
       })
       .select()
-      .single();
-
+      .single(); 
+   
     if (error) {
       throw new Error(`Failed to save record: ${error.message}`);
     }

@@ -27,11 +27,11 @@ CREATE POLICY "Allow public read" ON attendance_records
   TO anon, authenticated
   USING (true);
 
--- Policy: Allow authenticated users to delete records (for admin)
--- Adjust this based on your authentication needs
-CREATE POLICY "Allow authenticated delete" ON attendance_records
+-- Policy: Allow delete for admin (app uses anon key after password check)
+-- Both anon and authenticated can delete so the admin panel works without Supabase Auth
+CREATE POLICY "Allow delete attendance records" ON attendance_records
   FOR DELETE
-  TO authenticated
+  TO anon, authenticated
   USING (true);
 
 -- Optional: If you want to allow updates

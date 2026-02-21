@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { attendanceStorage, AttendanceRecord } from '../utils/attendanceStorage';
 import { Download, Trash2, Users, UserCheck, UserX, RefreshCw, LogOut, Heart } from 'lucide-react';
 
@@ -164,42 +164,42 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
           </div>
         </div>
 
-        {/* Action Buttons - responsive row */}
-        <div className="flex flex-wrap gap-3 sm:gap-4 mb-10 justify-center items-center">
+        {/* Action Buttons: 2 per row on small/medium, 4 in one row on large; smaller text on small */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10">
           <button
             onClick={loadRecords}
             disabled={loading}
-            className="px-4 sm:px-6 py-3 bg-white/60 backdrop-blur-sm border border-[rgb(var(--color-border))] rounded-full shadow-lg hover:bg-white/80 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] shrink-0"
+            className="px-3 sm:px-6 py-2.5 sm:py-3 bg-white/60 backdrop-blur-sm border border-[rgb(var(--color-border))] rounded-full shadow-lg hover:bg-white/80 transition-all flex items-center justify-center gap-1.5 sm:gap-2 disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] sm:min-h-[44px]"
             title="Refresh records"
           >
-            <RefreshCw className={`w-4 h-4 shrink-0 ${loading ? 'animate-spin' : ''}`} />
-            <span className="whitespace-nowrap">Refresh</span>
+            <RefreshCw className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${loading ? 'animate-spin' : ''}`} />
+            <span className="whitespace-nowrap text-xs sm:text-sm">Refresh</span>
           </button>
           <button
             onClick={handleExportJSON}
-            className="px-4 sm:px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0"
+            className="px-3 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-1.5 sm:gap-2 min-h-[40px] sm:min-h-[44px]"
             title="Export as JSON"
           >
-            <Download className="w-4 h-4 shrink-0" />
-            <span className="whitespace-nowrap">Export JSON</span>
+            <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="whitespace-nowrap text-xs sm:text-sm">Export JSON</span>
           </button>
           <button
             onClick={handleExportCSV}
-            className="px-4 sm:px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0"
+            className="px-3 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-1.5 sm:gap-2 min-h-[40px] sm:min-h-[44px]"
             title="Export as CSV"
           >
-            <Download className="w-4 h-4 shrink-0" />
-            <span className="whitespace-nowrap">Export CSV</span>
+            <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="whitespace-nowrap text-xs sm:text-sm">Export CSV</span>
           </button>
           {records.length > 0 && (
             <button
               onClick={handleClearAll}
               disabled={clearingAll}
-              className="px-4 sm:px-6 py-3 bg-red-600/80 hover:bg-red-600 disabled:bg-red-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="px-3 sm:px-6 py-2.5 sm:py-3 bg-red-600/80 hover:bg-red-600 disabled:bg-red-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-1.5 sm:gap-2 min-h-[40px] sm:min-h-[44px] disabled:opacity-70 disabled:cursor-not-allowed"
               title="Delete all records"
             >
-              <Trash2 className={`w-4 h-4 shrink-0 ${clearingAll ? 'animate-pulse' : ''}`} />
-              <span className="whitespace-nowrap">{clearingAll ? 'Deleting…' : 'Delete All'}</span>
+              <Trash2 className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${clearingAll ? 'animate-pulse' : ''}`} />
+              <span className="whitespace-nowrap text-xs sm:text-sm">{clearingAll ? 'Deleting…' : 'Delete All'}</span>
             </button>
           )}
         </div>
@@ -239,7 +239,7 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
               {records.map((record) => (
                 <div
                   key={record.id}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 sm:p-5 rounded-2xl border border-[rgb(var(--color-border))]/30 bg-white/50 hover:bg-white/80 transition-all hover:shadow-md"
+                  className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-4 sm:p-5 rounded-2xl border border-[rgb(var(--color-border))]/30 bg-white/50 hover:bg-white/80 transition-all hover:shadow-md"
                 >
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-base sm:text-lg mb-2 truncate">{record.name}</p>
@@ -262,19 +262,20 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
                       </span>
                     </div>
                   </div>
+                  {/* Delete: right on medium/large, below content on small */}
                   <button
                     type="button"
                     onClick={() => handleDelete(record.id)}
                     disabled={deletingId === record.id}
-                    className="self-end sm:self-center flex items-center gap-2 px-4 py-2.5 text-red-600 hover:bg-red-50 disabled:bg-red-50 disabled:opacity-60 rounded-xl transition-colors shrink-0 min-h-[44px] border border-red-200 hover:border-red-300"
+                    className="self-end md:self-center md:ml-4 flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 text-red-600 hover:bg-red-50 disabled:bg-red-50 disabled:opacity-60 rounded-xl transition-colors shrink-0 min-h-[40px] sm:min-h-[44px] border border-red-200 hover:border-red-300 text-xs sm:text-sm font-medium"
                     title="Delete this record"
                   >
                     {deletingId === record.id ? (
-                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      <RefreshCw className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-spin" />
                     ) : (
-                      <Trash2 className="w-4 h-4" />
+                      <Trash2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     )}
-                    <span className="text-sm font-medium sm:inline">{deletingId === record.id ? 'Deleting…' : 'Delete'}</span>
+                    <span>{deletingId === record.id ? 'Deleting…' : 'Delete'}</span>
                   </button>
                 </div>
               ))}

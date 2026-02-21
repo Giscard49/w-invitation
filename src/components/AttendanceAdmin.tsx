@@ -11,6 +11,8 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
   const [stats, setStats] = useState({ total: 0, attending: 0, notAttending: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [clearingAll, setClearingAll] = useState(false);
 
   useEffect(() => {
     loadRecords();
@@ -33,14 +35,16 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
   };
 
   const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this record?')) {
-      try {
-        await attendanceStorage.deleteRecord(id);
-        await loadRecords();
-      } catch (err) {
-        alert('Failed to delete record. Please try again.');
-        console.error('Error deleting record:', err);
-      }
+    if (!confirm('Are you sure you want to delete this record?')) return;
+    try {
+      setDeletingId(id);
+      await attendanceStorage.deleteRecord(id);
+      await loadRecords();
+    } catch (err) {
+      alert('Failed to delete record. Please try again.');
+      console.error('Error deleting record:', err);
+    } finally {
+      setDeletingId(null);
     }
   };
 
@@ -77,14 +81,16 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
   };
 
   const handleClearAll = async () => {
-    if (confirm('Are you sure you want to delete ALL records? This cannot be undone.')) {
-      try {
-        await attendanceStorage.clearAllRecords();
-        await loadRecords();
-      } catch (err) {
-        alert('Failed to clear records. Please try again.');
-        console.error('Error clearing records:', err);
-      }
+    if (!confirm('Are you sure you want to delete ALL records? This cannot be undone.')) return;
+    try {
+      setClearingAll(true);
+      await attendanceStorage.clearAllRecords();
+      await loadRecords();
+    } catch (err) {
+      alert('Failed to clear records. Please try again.');
+      console.error('Error clearing records:', err);
+    } finally {
+      setClearingAll(false);
     }
   };
 
@@ -158,41 +164,42 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 mb-10 justify-center">
+        {/* Action Buttons - responsive row */}
+        <div className="flex flex-wrap gap-3 sm:gap-4 mb-10 justify-center items-center">
           <button
             onClick={loadRecords}
             disabled={loading}
-            className="px-6 py-3 bg-white/60 backdrop-blur-sm border border-[rgb(var(--color-border))] rounded-full shadow-lg hover:bg-white/80 transition-all flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 sm:px-6 py-3 bg-white/60 backdrop-blur-sm border border-[rgb(var(--color-border))] rounded-full shadow-lg hover:bg-white/80 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] shrink-0"
             title="Refresh records"
           >
-            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-            Refresh
+            <RefreshCw className={`w-4 h-4 shrink-0 ${loading ? 'animate-spin' : ''}`} />
+            <span className="whitespace-nowrap">Refresh</span>
           </button>
           <button
             onClick={handleExportJSON}
-            className="px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center gap-2"
+            className="px-4 sm:px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0"
+            title="Export as JSON"
           >
-            <Download className="w-4 h-4" />
-             Export JSON
+            <Download className="w-4 h-4 shrink-0" />
+            <span className="whitespace-nowrap">Export JSON</span>
           </button>
-
-        <br/>
-
           <button
             onClick={handleExportCSV}
-            className="px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center gap-2"
+            className="px-4 sm:px-6 py-3 bg-gradient-to-r from-[rgb(var(--color-accent))]/80 to-[rgb(var(--color-accent))]/90 hover:from-[rgb(var(--color-accent))] hover:to-[rgb(var(--color-accent))] text-white rounded-full shadow-lg shadow-[rgb(var(--color-accent))]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0"
+            title="Export as CSV"
           >
-            <Download className="w-4 h-4" />
-             Export CSV
+            <Download className="w-4 h-4 shrink-0" />
+            <span className="whitespace-nowrap">Export CSV</span>
           </button>
           {records.length > 0 && (
             <button
               onClick={handleClearAll}
-              className="px-6 py-3 bg-red-600/80 hover:bg-red-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+              disabled={clearingAll}
+              className="px-4 sm:px-6 py-3 bg-red-600/80 hover:bg-red-600 disabled:bg-red-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 min-h-[44px] shrink-0 disabled:opacity-70 disabled:cursor-not-allowed"
+              title="Delete all records"
             >
-              <Trash2 className="w-4 h-4" />
-              Del All
+              <Trash2 className={`w-4 h-4 shrink-0 ${clearingAll ? 'animate-pulse' : ''}`} />
+              <span className="whitespace-nowrap">{clearingAll ? 'Deleting…' : 'Delete All'}</span>
             </button>
           )}
         </div>
@@ -232,12 +239,12 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
               {records.map((record) => (
                 <div
                   key={record.id}
-                  className="flex items-center justify-between p-5 rounded-2xl border border-[rgb(var(--color-border))]/30 bg-white/50 hover:bg-white/80 transition-all hover:shadow-md"
+                  className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 sm:p-5 rounded-2xl border border-[rgb(var(--color-border))]/30 bg-white/50 hover:bg-white/80 transition-all hover:shadow-md"
                 >
-                  <div className="flex-1">
-                    <p className="font-semibold text-lg mb-2">{record.name}</p>
-                    <div className="flex items-center gap-4 text-sm text-[rgb(var(--color-text-secondary))]">
-                      <span className={`px-4 py-1.5 rounded-full text-xs font-medium ${
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-base sm:text-lg mb-2 truncate">{record.name}</p>
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-sm text-[rgb(var(--color-text-secondary))]">
+                      <span className={`px-3 sm:px-4 py-1.5 rounded-full text-xs font-medium shrink-0 ${
                         record.willAttend
                           ? 'bg-green-100 text-green-700 border border-green-200'
                           : 'bg-red-100 text-red-700 border border-red-200'
@@ -256,11 +263,18 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
                     </div>
                   </div>
                   <button
+                    type="button"
                     onClick={() => handleDelete(record.id)}
-                    className="p-2 text-red-600 hover:bg-red-50 rounded-xl transition-colors ml-4"
-                    title="Delete record"
+                    disabled={deletingId === record.id}
+                    className="self-end sm:self-center flex items-center gap-2 px-4 py-2.5 text-red-600 hover:bg-red-50 disabled:bg-red-50 disabled:opacity-60 rounded-xl transition-colors shrink-0 min-h-[44px] border border-red-200 hover:border-red-300"
+                    title="Delete this record"
                   >
-                    <Trash2 className="w-5 h-5" />
+                    {deletingId === record.id ? (
+                      <RefreshCw className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Trash2 className="w-4 h-4" />
+                    )}
+                    <span className="text-sm font-medium sm:inline">{deletingId === record.id ? 'Deleting…' : 'Delete'}</span>
                   </button>
                 </div>
               ))}

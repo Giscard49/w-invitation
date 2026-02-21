@@ -165,7 +165,7 @@ export function AttendanceAdmin({ onLogout }: AttendanceAdminProps) {
         </div>
 
         {/* Action Buttons - responsive row */}
-        <div className="flex flex-wrap gap-3 sm:gap-4 mb-10 justify-center items-center">
+        <div className="flex flex-nowrap gap-3 sm:gap-4 mb-10 justify-center items-center">
           <button
             onClick={loadRecords}
             disabled={loading}

@@ -465,8 +465,9 @@ export default function App() {
                 {submitted ? '✓ Submitted!' : 'Submit'}
               </button>
           {/* Confirmation message */}
+          
                {submitted && (
-              <p className="mt-4 text-center text-green-600 font-medium">
+              <p className="mt-4 text-center text-green-600 font-semibold font-medium"> <br/>
               Your RSVP has been noted, We appreciate you letting us know! 💖
                 </p>
                    )}

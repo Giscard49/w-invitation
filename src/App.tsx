@@ -142,7 +142,7 @@ export default function App() {
       setName('');
       setWillAttend(null);
       
-      setTimeout(() => setSubmitted(false), 15000);
+      setTimeout(() => setSubmitted(false), 160000);
     } catch (error) {
       console.error('Error saving attendance record:', error);
       alert('There was an error saving your response. Please try again.');

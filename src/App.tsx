@@ -9,6 +9,10 @@ import photo4 from "../src/asset/photo4.jpeg";
 import mtn from "../src/asset/mtn.png";
 import Zelle from "../src/asset/Zelle.png";
 import cashapp from "../src/asset/cashapp.png";
+import InvitationImage from "../src/asset/invitation.png";
+import { Download } from 'lucide-react';
+
+
 
 
 
@@ -24,6 +28,16 @@ export default function App() {
     minutes: 0,
     seconds: 0
   });
+
+const handleDownloadInvitation = () => {
+  const link = document.createElement("a");
+  link.href = InvitationImage;
+  link.download = "Wedding-Invitation.png";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   // Check URL hash for admin view and authentication
   useEffect(() => {
@@ -239,13 +253,6 @@ export default function App() {
             </p>
           </div>
 
-          {/* Dove Decoration */}
-          {/* <div className="flex justify-end mt-6 pr-8">
-            <svg width="70" height="70" viewBox="0 0 60 60" fill="none" className="text-[rgb(var(--color-accent))]/30">
-              <path d="M45 25C45 25 40 20 35 20C30 20 28 22 25 25C22 28 20 32 18 35C16 38 12 40 10 42C8 44 5 48 5 48C5 48 8 45 12 43C16 41 20 40 25 38C30 36 35 33 38 30C41 27 43 25 45 25Z" fill="currentColor"/>
-              <ellipse cx="38" cy="24" rx="2.5" ry="2.5" fill="currentColor"/>
-            </svg>
-          </div> */}
 
           {/* Schedule Heading */}
           <h3 className="text-5xl mt-12 mb-6 text-center" style={{ fontFamily: 'Tangerine, cursive' }}>
@@ -378,10 +385,8 @@ export default function App() {
       <div className="text-center ">
         <p className="font-semibold mb-2 text-lg">Heaven Garden Rebero, Kigali</p>
         
-        <p className="text-sm text-[rgb(var(--color-text-secondary))] leading-relaxed text-right underline decoration-dotted underline-offset-4">
-        View Location{" "} 
+        <p className="text-lg text-[rgb(var(--color-text-secondary))] leading-relaxed text-right underline decoration-dotted underline-offset-4"> View Location{" "} </p>
 
-        </p>
       </div>
     </div>
   </div>
@@ -407,7 +412,7 @@ export default function App() {
 
             <form onSubmit={handleSubmit}>
               <div className="mb-8">
-                <label className="block text-center text-sm mb-3 text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">
+                <label className="block text-center text-base mb-3 text-[rgb(var(--color-text-secondary))] uppercase tracking-wider">
                   Your full name
                 </label>
                 <input
@@ -577,7 +582,7 @@ export default function App() {
             Contact<br />Information
           </h3>
 
-          <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-10 shadow-lg shadow-black/5 border border-white/80">
+          <div className="bg-white/60 backdrop-blur-sm     rounded-3xl p-8 mb-10 shadow-lg shadow-black/5 border border-white/80">
             <p className="text-center text-base leading-relaxed mb-4 text-[rgb(var(--color-text-secondary))]">
               If you have any questions, feel free to contact <br/> <br/>The Groom at:
             </p>
@@ -590,8 +595,8 @@ export default function App() {
             target="_blank"
              rel="noopener noreferrer"
          className="block text-center text-3xl mb-8 hover:text-[rgb(var(--color-accent))] transition-colors"
-      style={{ fontFamily: 'Tangerine, cursive' }}
-       >
+          style={{ fontFamily: 'Tangerine, cursive' }}
+          >
            +1 (832) 865-8481
              </a>
 
@@ -606,7 +611,7 @@ export default function App() {
             </p>
 
             <a href="tel:+250795975619" className="block text-center text-3xl hover:text-[rgb(var(--color-accent))] transition-colors" style={{ fontFamily: 'Tangerine, cursive' }}>
-              +250 795 975 619 <br/> <br/>
+              +250 795 975 619    <br/> <br/>
             </a>
             <a
                href="https://wa.me/15012471822"
@@ -617,8 +622,21 @@ export default function App() {
                    >
                    +1 (501) 247-1822
                  </a>
-
           </div>
+
+<button
+  onClick={handleDownloadInvitation}
+  className="mt-6 px-10 bg-white border border-[rgb(var(--color-border))]/50 
+             rounded-full py-4 text-sm uppercase tracking-widest
+             hover:bg-[rgb(var(--color-accent))] hover:text-white
+             transition-all duration-300 shadow-md
+             mx-auto flex items-center gap-3"
+>
+  <Download className="w-4 h-4" />
+  Download Invitation
+</button>
+
+
 
          {/* Decorative Divider */}
           <div className="flex items-center justify-center my-12">

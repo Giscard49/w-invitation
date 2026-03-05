@@ -17,7 +17,7 @@
 
 INSERT INTO admin_credentials (password_hash, is_active)
 VALUES (
-  '4da3376323046a3bb6759f0a3f4ae7100a0567950c53ee42d2e19201baaa6dfc',  -- Replace with SHA-256 hash of your password
+  'c7e79c12a5c80b268eedb3e98561d304b1482504332debf2310bbcdfd5db5757',  -- Replace with SHA-256 hash of your password
   true
 )
 ON CONFLICT DO NOTHING;

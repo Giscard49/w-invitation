@@ -9,7 +9,7 @@ import photo4 from "../src/asset/photo4.jpeg";
 import mtn from "../src/asset/mtn.png";
 import Zelle from "../src/asset/Zelle.png";
 import cashapp from "../src/asset/cashapp.png";
-import InvitationImage from "../src/asset/invitation.png";
+import InvitationImage from "../src/asset/invitation.jpg";
 import { Download } from 'lucide-react';
 
 

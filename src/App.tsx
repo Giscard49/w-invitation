@@ -32,7 +32,7 @@ export default function App() {
 const handleDownloadInvitation = () => {
   const link = document.createElement("a");
   link.href = InvitationImage;
-  link.download = "Wedding-Invitation.png";
+  link.download = "Wedding-Invitation";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

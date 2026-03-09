@@ -9,8 +9,9 @@ import photo4 from "../src/asset/photo4.jpeg";
 import mtn from "../src/asset/mtn.png";
 import Zelle from "../src/asset/Zelle.png";
 import cashapp from "../src/asset/cashapp.png";
-import InvitationImage from "../src/asset/invitation.jpg";
+import InvitationImage from "../src/asset/invitation.pdf";
 import { Download } from 'lucide-react';
+
 
 
 
@@ -278,7 +279,7 @@ const handleDownloadInvitation = () => {
           <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-10 mb-12 shadow-xl shadow-black/5">
             <div className="space-y-5 text-base"> <br/> <br/>
               <div className="flex items-start gap-3">
-                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">10:00 :</span>
+                <span className="font-semibold min-w-[60px] text-[rgb(var(--color-accent))]">9:00 :</span>
                 <span className="text-[rgb(var(--color-text-secondary))]">  <i>Introduction & Dowry</i></span>
               </div>
               
@@ -403,7 +404,7 @@ const handleDownloadInvitation = () => {
           {/* RSVP Form */}
           <div className="bg-white border border-[rgb(var(--color-border))]/50 rounded-[2rem] p-10 shadow-xl shadow-black/5">
             <h3 className="text-5xl mb-6 text-center leading-tight" style={{ fontFamily: 'Tangerine, cursive' }}>
-              Please confirm<br />your attendance
+              Kindly submit<br />your RSVP
             </h3>
 
             <p className="text-center text-sm mb-8 text-[rgb(var(--color-accent))]">
